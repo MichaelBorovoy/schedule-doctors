@@ -1,4 +1,4 @@
-package ua.com.mcingo.dev.norma;
+package ua.com.mcingo.dev.references.norma;
 
 import javax.persistence.*;
 import java.util.Map;
@@ -11,8 +11,8 @@ public class NormaWH {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name="name_norma")
-    private String nameNorma;
+    @Column(name="name")
+    private String name;
     @Column
     private String year;
     @ElementCollection
@@ -27,12 +27,12 @@ public class NormaWH {
         this.id = id;
     }
 
-    public String getNameNorma() {
-        return nameNorma;
+    public String getName() {
+        return name;
     }
 
-    public void setNameNorma(String nameNorma) {
-        this.nameNorma = nameNorma;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getYear() {
@@ -49,5 +49,15 @@ public class NormaWH {
 
     public void setHours(Map<String, Integer> hours) {
         this.hours = hours;
+    }
+
+    @Override
+    public String toString() {
+        return "NormaWH{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", year='" + year + '\'' +
+                ", hours=" + hours +
+                '}';
     }
 }

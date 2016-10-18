@@ -1,4 +1,4 @@
-package ua.com.mcingo.dev.norma;
+package ua.com.mcingo.dev.references.norma;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class NormaWHServiceImpl implements NormaWHService{
     NormaWHRepository normaWHRepository;
 
     @Override
-    public List findAllNormaWHForYears() {
+    public List<NormaWH> findAllNormaWHForYears() {
         return null;
     }
 }
